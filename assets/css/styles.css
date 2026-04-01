@@ -1,4 +1,24 @@
+.logo-heading {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0;
+}
+
+.aura-logo-svg {
+	width: 340px;
+	height: auto;
+	display: block;
+}
+
+.aura-logo {
+	height: 48px;
+	width: auto;
+	vertical-align: middle;
+}
+
 .navbar {
+	margin-top: -120px;
 	background-color: #000;
 	padding-top: 40px;
 	padding-right: 40px;
@@ -6,3 +26,14 @@
     border-left: 50px solid #fff;
     border-right: 50px solid #fff;
 }
+
+.hero-area {
+	background-color: #000;
+}
+body {
+  margin: 0;
+}
+body {
+  margin: 0;
+}
+
