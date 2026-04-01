@@ -15,10 +15,61 @@
         <a href="services.html">Services</a>
         <a href="book-appointment.html">Book Appointment</a>
         <a href="style-matcher.html">Style Matcher</a>
-        <a href="index.html">Home</a>
     </nav>
     <section class="hero-area">
-        <h2>Style Matcher</h2>
+        <img src="assets/images/hero-image.png" alt="Aura Hair Studio Logo" class="hero-image">
+        <aside class="hero-card">
+            <a href="style-matcher.html" class="hero-card-link">
+                <h2><span class="keep-line">Find Your Perfect</span><br>Hairstyle</h2>
+                <p>Try Our Style Matcher</p>
+            </a>
+        </aside>
     </section>
+    <section id="style-matcher" class="matcher-container">
+    <header class="matcher-header">
+        <h1>Find Your Signature Look</h1>
+        <p>Select your face shape to discover styles that enhance your natural features.</p>
+    </header>
+
+    <input type="radio" name="face-shape" id="all" checked hidden>
+    <input type="radio" name="face-shape" id="oval" hidden>
+    <input type="radio" name="face-shape" id="square" hidden>
+    <input type="radio" name="face-shape" id="heart" hidden>
+
+    <nav class="shape-selector" aria-label="Face Shape Selection">
+        <label for="oval" class="shape-card">
+            <img src="assets/images/oval-icon.svg" alt="" aria-hidden="true">
+            <span>Oval</span>
+        </label>
+        <label for="square" class="shape-card">
+            <img src="assets/images/square-icon.svg" alt="" aria-hidden="true">
+            <span>Square</span>
+        </label>
+        <label for="heart" class="shape-card">
+            <img src="assets/images/heart-icon.svg" alt="" aria-hidden="true">
+            <span>Heart</span>
+        </label>
+    </nav>
+
+    <div class="results-grid">
+        <article class="style-card oval">
+            <img src="assets/images/bob-cut.jpg" alt="A chin-length bob cut on a model">
+            <h3>The Classic Bob</h3>
+            <p>Perfect for balancing oval proportions.</p>
+        </article>
+        
+        <article class="style-card square">
+            <img src="assets/images/layers.jpg" alt="Long soft layers on a model">
+            <h3>Soft Layers</h3>
+            <p>Softens the jawline for square face shapes.</p>
+        </article>
+
+        <article class="style-card heart">
+            <img src="assets/images/pixie.jpg" alt="A textured pixie cut on a model">
+            <h3>Side-Swept Pixie</h3>
+            <p>Balances a wider forehead and narrow chin.</p>
+        </article>
+    </div>
+</section>
 </body>
 </html>

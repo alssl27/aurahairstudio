@@ -29,6 +29,8 @@
 	justify-content: center;
 	align-items: center;
 	gap: 36px;
+	position: relative;
+	z-index: 20;
 }
 
 .navbar a {
@@ -37,10 +39,60 @@
 	text-decoration: none;
 	font-size: 1.35rem;
 	font-weight: 500;
+	position: relative;
+	z-index: 21;
+	pointer-events: auto;
 }
 
 .hero-area {
 	background-color: #000;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 32px;
+	padding: 32px 40px 40px;
+}
+
+.hero-image {
+	max-width: 620px;
+	width: 100%;
+	height: auto;
+}
+
+.hero-card {
+	background-color: #000;
+	color: #fff;
+	padding: 24px;
+	width: 320px;
+	height: 320px;
+	font-family: monospace;
+	font-size: 2.2rem;
+	line-height: 1.5;
+	text-align: center;
+	align-self: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.hero-card p {
+	margin: 0;
+}
+
+.hero-card-link {
+	color: inherit;
+	text-decoration: none;
+	display: block;
+}
+
+.keep-line {
+	white-space: nowrap;
+}
+
+@media (max-width: 900px) {
+	.hero-area {
+		flex-direction: column;
+	}
 }
 body {
   margin: 0;
@@ -48,6 +100,49 @@ body {
 body {
   margin: 0;
 }
+
+.style-matcher-page {
+	background-color: #000;
+	color: #fff;
+}
+
 header {
-	height: 0%;
+	height: auto;
+}
+
+/* Base Grid Setup */
+.results-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 2rem 0;
+	
+}
+
+/* 1. Hide all cards by default when a filter is active */
+#oval:checked ~ .results-grid .style-card,
+#square:checked ~ .results-grid .style-card,
+#heart:checked ~ .results-grid .style-card {
+    display: none;
+}
+
+/* 2. Only show the specific cards matching the checked radio */
+#oval:checked ~ .results-grid .oval,
+#square:checked ~ .results-grid .square,
+#heart:checked ~ .results-grid .heart {
+    display: block;
+    animation: fadeIn 0.5s ease-in;
+}
+
+/* 3. Style the "Active" selection card */
+#oval:checked ~ .shape-selector label[for="oval"],
+#square:checked ~ .shape-selector label[for="square"],
+#heart:checked ~ .shape-selector label[for="heart"] {
+    border: 2px solid #D4AF37; /* Gold for Aura Studio */
+    background: #fdfbf7;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
 }
